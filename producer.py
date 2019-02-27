@@ -10,7 +10,7 @@ topic = 'my-topic'
 
 
 def emit_video(path_to_video):
-    print('start emitting')
+    print('start')
 
     video = cv2.VideoCapture(path_to_video)
 
@@ -31,13 +31,7 @@ def emit_video(path_to_video):
 
         print('.', end='', flush=True)
 
-        # to reduce CPU usage
-        # time.sleep(0.2)
-    print()
-
-    video.release()
-
-    print('done')
-
-
-emit_video()
+emit_video(0)
+# zero is for open webcam or usb webcam
+# can play a video just add video file in emit_video function
+# rtsp camera stream add rtsp feed in emit_video function
